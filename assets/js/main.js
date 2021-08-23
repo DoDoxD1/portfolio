@@ -48,11 +48,11 @@ skillsHeader.forEach((el) =>{
 // qualification-js
 
 const tabs = document.querySelectorAll('[data-target]'),
-tabsContents = document.querySelectorAll('[data-content]')
+            tabsContents = document.querySelectorAll('[data-content]')
 
 tabs.forEach(tab =>{
     tab.addEventListener('click',() => {
-        const target = document.querySelectorAll(tab.dataset.target)
+        const target = document.querySelector(tab.dataset.target)
 
         tabsContents.forEach(tabContent => {
             tabContent.classList.remove('qualification__active')

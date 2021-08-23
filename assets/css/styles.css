@@ -564,3 +564,8 @@ g:hover{
 .qualification__active[data-content]{
     display: block;
 }
+
+.qualification__active[data-target]{
+    background-color: var(--first-color);
+    color: #ffffff;
+}
