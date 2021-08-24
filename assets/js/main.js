@@ -65,3 +65,53 @@ tabs.forEach(tab =>{
         tab.classList.add('qualification__active')
     })
 })
+
+// services modal
+
+const modalViews = document.querySelectorAll('.services__modal'),
+            modalBtns = document.querySelectorAll('.servies__button'),
+            modalCloses = document.querySelectorAll('.services__modal-close')
+
+let modal = function(modalClick){
+    modalViews[modalClick].classList.add('active-modal')
+}
+
+modalBtns.forEach((modalBtn, i) => {
+    modalBtn.addEventListener('click', ()=>{
+        modal(i)
+    })
+})
+
+modalCloses.forEach((modalCloses) => {
+    modalCloses.addEventListener('click', () =>{
+        modalViews.forEach((modalView)=>{
+            modalView.classList.remove('active-modal')
+        })
+    })
+})
+
+// slider
+
+// let swiper = new Swiper(".portfolio__container", {
+//     direction: "vertical",
+//     slidesPerView: 1,
+//     spaceBetween: 30,
+//     mousewheel: true,
+//     pagination: {
+//       el: ".swiper-pagination",
+//       clickable: true,
+//     },
+//   });
+
+  let swiper = new Swiper(".portfolio__container", {
+    cssMode: true,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
