@@ -328,6 +328,15 @@ g:hover{
     background-color: var(--first-color-alt);
 }
 
+.button-white{
+    background-color: white;
+    color: var(--first-color);
+}
+
+.button-white:hover{
+    background-color: white;
+}
+
 .button__icon{
     font-size: 1.25rem;
     margin-left: var(--mb-0-5);
@@ -730,4 +739,89 @@ g:hover{
 .swiper-button-next,
 .swiper-button-bullet{
     outline: none;
+}
+
+/* project in mind */
+
+.project{
+    text-align: center;
+}
+
+.project__bg{
+    background-color: var(--first-color);
+    padding: 3rem;
+}
+
+.project__title{
+    font-size: var(--h2--font-size);
+    mask-border: var(--mb-0-75);
+}
+
+.project__description{
+    margin-bottom: var(--mb-1-5);
+}
+
+.project__title,
+.project__description{
+    color: white;
+}
+
+.project__img{
+    width: 232px;
+    justify-self: center;
+}
+
+/* contact me css */
+
+.contact__container{
+    row-gap: 3rem;
+}
+
+.contact__information{
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--mb-2);
+}
+
+.contact__icon{
+    font-size: 2rem;
+    color: var(--first-color);
+    margin-right: var(--mb-0-75);
+}
+
+.contact__title{
+    font-size: var(--h3--font-size);
+    font-weight: var(--font-medium);
+}
+
+.contact__subtitle{
+    font-size: var(--small--font-size);
+    color: var(--text-color-light);
+}
+
+.contact__label{
+    font-size: var(--smaller--font-size);
+    color: var(--title-color);
+}
+
+.contact__input{
+    width: 100%;
+    background-color: var(--input-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
+    font-size: var(--normal--font-size);
+    border: none;
+    outline: none;
+    padding: .25rem .5rem .5rem 0;
+}
+
+.button__icon-contact-send{
+    transform: rotate(45deg);
+    margin-left: -1px;
+}
+
+.contact__content{
+    background-color: var(--input-color);
+    border-radius: .5rem;
+    padding: .75rem 1rem .25rem;
 }
