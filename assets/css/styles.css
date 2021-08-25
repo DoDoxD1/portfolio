@@ -233,6 +233,18 @@ g:hover{
     bottom: 0;
 }
 
+/* active button */
+
+.active-link{
+    color: var(--first-color);
+}
+
+/* change bg color */
+
+.scroll-header{
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+}
+
 /* home-css */
 
 .home__container{
@@ -758,6 +770,7 @@ g:hover{
 }
 
 .project__description{
+    margin-top: var(--mb-0-5);
     margin-bottom: var(--mb-1-5);
 }
 
@@ -876,4 +889,26 @@ g:hover{
 .footer__subtitle,
 .footer__link{
     color:#ffffff;
+}
+
+/* scroll up */
+
+.scrollup{
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    background-color: var(--first-color);
+    opacity: .8;
+    padding: .3rem .3rem 0 .3rem;
+    border-radius: .4rem;
+    z-index: var(--z-tootip);
+    transition: .4s;
+}
+
+.scrollup:hover{
+    background-color: var(--first-color-alt);
+}
+
+.show-scroll{
+    bottom: 5rem;
 }
