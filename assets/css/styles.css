@@ -420,7 +420,7 @@ g:hover{
 /* about-css */
 
 .about__img{
-    width: 200px;
+    width: 300px;
     border-radius: .5rem;
     justify-self: center;
     align-self: center ;
@@ -1069,7 +1069,8 @@ g:hover{
     }
     
     .about__img{
-        width: 250px;
+        width: 350px;
+        margin-left: 2rem;
     }
 
     .qualification__sections{
@@ -1173,7 +1174,7 @@ g:hover{
     }
 
     .about__img{
-        width: 300px;
+        width: 400px;
     }
 
     .about__description{
