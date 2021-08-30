@@ -1,9 +1,9 @@
 <?php
 
-$server = 'localhost';
-$username = 'root';
-$password = '';
-$database = 'contact';
+$server = 'sql308.epizy.com';
+$username = 'epiz_29473124';
+$password = '8v4JbuQnRHCmE0o';
+$database = 'epiz_29473124_contact';
 
 $conn = mysqli_connect($server, $username, $password, $database);
 if(!$conn){
@@ -28,10 +28,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 $sql = "INSERT INTO `contact`(`name`, `email`, `project`, `msg`) VALUES ('$name','$email','$project','$msg')";
 $result = mysqli_query($conn, $sql);
     if($result){
-        echo"<script>alert('Hola! Your record is submitted. You will be redirected now.');window.location = '/portfolio/index.html';</script>";
+        echo"<script>alert('Hola! Your record is submitted. You will be redirected now.');window.location = 'http://techyarihant.me/';</script>";
         
     }else{
-        echo"<script>alert('Oh! An error occured! Your record not submitted');window.location = '/portfolio/index.html';</script>";
+        echo"<script>alert('Oh! An error occured! Your record not submitted');window.location = 'http://techyarihant.me/';</script>";
     }
     
     // header("location:  \portfolio/index.html");
