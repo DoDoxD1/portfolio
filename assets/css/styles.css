@@ -301,8 +301,19 @@ g:hover {
 }
 
 .home__social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
   font-size: 1.25rem;
+  line-height: 1;
   color: var(--first-color);
+}
+
+.home__social-icon svg,
+.home__social-icon i {
+  display: block;
 }
 
 .home__social-icon:hover {
@@ -922,8 +933,24 @@ g:hover {
   color: var(--first-color-lighter);
 }
 
+.footer__socials {
+  display: flex;
+  align-items: center;
+  column-gap: var(--mb-1-5);
+}
+
 .footer__social {
-  margin-right: var(--mb-1-5);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  line-height: 1;
+}
+
+.footer__social svg,
+.footer__social i {
+  display: block;
 }
 
 .footer__copy {
