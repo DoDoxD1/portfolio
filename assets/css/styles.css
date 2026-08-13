@@ -777,6 +777,12 @@ g:hover {
   margin-bottom: var(--mb-0-75);
 }
 
+.portfolio__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
 .portfolio__button:hover .button__icon {
   transform: translateX(0.25rem);
 }
