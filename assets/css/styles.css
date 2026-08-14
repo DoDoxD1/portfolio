@@ -512,10 +512,16 @@ button {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.15));
 }
 
-.home__portrait-image img {
+.home__portrait-image img,
+.home__illustration {
   width: 100%;
   aspect-ratio: 4 / 4.8;
   object-fit: cover;
+}
+
+.home__illustration {
+  height: auto;
+  display: block;
 }
 
 .home__floating {
@@ -528,6 +534,7 @@ button {
 .home__floating--top {
   top: 1.5rem;
   left: -1rem;
+  padding-left: 1.45rem;
 }
 
 .home__floating--bottom {
@@ -1467,6 +1474,10 @@ textarea.contact__input {
 @media screen and (min-width: 1024px) {
   .main {
     padding-top: 0.5rem;
+  }
+
+  .home__floating--top {
+    padding-left: 1.95rem;
   }
 }
 

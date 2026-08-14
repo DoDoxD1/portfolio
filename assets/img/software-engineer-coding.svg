@@ -1,0 +1,54 @@
+<svg viewBox="0 0 520 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vector illustration of a software engineer coding">
+  <defs>
+    <linearGradient id="heroVectorBackdrop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.96" />
+      <stop offset="100%" stop-color="#dbeafe" stop-opacity="0.82" />
+    </linearGradient>
+    <linearGradient id="heroVectorAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5ac8fa" />
+      <stop offset="100%" stop-color="#0a84ff" />
+    </linearGradient>
+    <linearGradient id="heroVectorShirt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#164e9c" />
+      <stop offset="100%" stop-color="#0a84ff" />
+    </linearGradient>
+    <linearGradient id="heroVectorDesk" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d6e7f8" />
+      <stop offset="100%" stop-color="#edf5ff" />
+    </linearGradient>
+  </defs>
+  <rect x="30" y="30" width="460" height="560" rx="48" fill="url(#heroVectorBackdrop)" />
+  <circle cx="392" cy="148" r="92" fill="#5ac8fa" opacity="0.16" />
+  <circle cx="124" cy="118" r="70" fill="#0a84ff" opacity="0.1" />
+  <rect x="106" y="108" width="308" height="182" rx="26" fill="#f7fbff" opacity="0.72" />
+  <rect x="124" y="128" width="272" height="152" rx="22" fill="#081524" />
+  <circle cx="150" cy="152" r="5.5" fill="#ff6b6b" />
+  <circle cx="171" cy="152" r="5.5" fill="#ffd166" />
+  <circle cx="192" cy="152" r="5.5" fill="#06d6a0" />
+  <path d="M164 197l20-20 20 20" fill="none" stroke="#5ac8fa" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M246 176l-22 104" fill="none" stroke="#94e2ff" stroke-width="10" stroke-linecap="round" />
+  <path d="M286 197l20-20 20 20" fill="none" stroke="#5ac8fa" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" transform="scale(-1 1) translate(-612 0)" />
+  <rect x="166" y="232" width="64" height="11" rx="5.5" fill="#0a84ff" opacity="0.9" />
+  <rect x="244" y="232" width="108" height="11" rx="5.5" fill="#d0e7ff" opacity="0.9" />
+  <rect x="166" y="254" width="92" height="11" rx="5.5" fill="#c0defd" opacity="0.85" />
+  <rect x="274" y="254" width="54" height="11" rx="5.5" fill="#5ac8fa" opacity="0.95" />
+  <path d="M96 468c18-20 52-34 94-34h152c43 0 76 14 94 34v13H96z" fill="url(#heroVectorDesk)" />
+  <rect x="112" y="480" width="296" height="48" rx="24" fill="#eff6ff" />
+  <rect x="352" y="340" width="56" height="126" rx="26" fill="#1d3557" opacity="0.76" />
+  <circle cx="214" cy="346" r="44" fill="#ffc7a1" />
+  <path d="M171 342c4-33 23-55 48-55 29 0 49 18 55 50-20-9-38-13-56-13-16 0-31 5-47 18z" fill="#12243a" />
+  <path d="M169 510c10-54 41-95 101-95 59 0 90 41 100 95v18H169z" fill="url(#heroVectorShirt)" />
+  <path d="M202 429c-34 14-61 38-74 76l27 12c14-27 33-49 60-60z" fill="#ffc7a1" />
+  <path d="M300 425c33 10 67 32 90 71l-25 16c-18-23-40-39-70-51z" fill="#ffc7a1" />
+  <rect x="230" y="386" width="134" height="84" rx="16" fill="#d7e4f5" />
+  <rect x="240" y="396" width="114" height="60" rx="11" fill="#0f172a" />
+  <rect x="254" y="412" width="28" height="7" rx="3.5" fill="#5ac8fa" />
+  <rect x="291" y="412" width="48" height="7" rx="3.5" fill="#d1e8ff" />
+  <rect x="254" y="428" width="70" height="7" rx="3.5" fill="#9edcff" />
+  <rect x="334" y="428" width="10" height="7" rx="3.5" fill="#5ac8fa" />
+  <path d="M220 470h156l20 17H198z" fill="#f4f8fd" />
+  <rect x="102" y="360" width="74" height="38" rx="19" fill="#ffffff" opacity="0.74" />
+  <text x="139" y="385" text-anchor="middle" font-size="18" font-family="system-ui, sans-serif" font-weight="700" fill="#0a84ff">&lt;/&gt;</text>
+  <rect x="352" y="222" width="72" height="38" rx="19" fill="#ffffff" opacity="0.8" />
+  <text x="388" y="247" text-anchor="middle" font-size="18" font-family="system-ui, sans-serif" font-weight="700" fill="#0a84ff">{ }</text>
+</svg>
