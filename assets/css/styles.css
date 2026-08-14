@@ -427,12 +427,21 @@ button {
   align-items: center;
   width: fit-content;
   padding: 0.5rem 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.44);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.5);
   color: var(--first-color);
   font-size: var(--smaller--font-size);
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+body.dark-theme .home__eyebrow,
+body.dark-theme .qualification__eyebrow,
+body.dark-theme .portfolio__label {
+  background: rgba(10, 132, 255, 0.18);
+  border-color: rgba(144, 214, 255, 0.28);
+  color: #cdeaff;
 }
 
 .home__title {
@@ -827,10 +836,18 @@ button {
   display: inline-flex;
   align-items: center;
   padding: 0.62rem 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.44);
   color: var(--title-color);
   font-size: var(--smaller--font-size);
+}
+
+body.dark-theme .skills__chips span,
+body.dark-theme .portfolio__tag-row span {
+  background: rgba(148, 163, 184, 0.14);
+  border-color: rgba(203, 213, 225, 0.18);
+  color: #e8f0fb;
 }
 
 /* qualification-css */
