@@ -364,14 +364,17 @@ button {
   position: absolute;
   top: 1rem;
   right: 1rem;
+  z-index: 2;
   width: 2.4rem;
   height: 2.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.72);
+  background: var(--surface-elevated);
+  box-shadow: var(--shadow-soft);
 }
 
 /* show menu css */
-.show-menu {
+.nav__menu.show-menu {
   transform: translateY(0);
   opacity: 1;
   pointer-events: auto;
@@ -1379,10 +1382,13 @@ textarea.contact__input {
     position: absolute;
     left: 1.8rem;
     right: 1.8rem;
-    bottom: 2rem;
+    top: calc(100dvh - min(72dvh, 30rem) + 3.25rem);
+    bottom: auto;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.75rem;
+    align-content: start;
+    z-index: 1;
   }
 
   .nav__link {
@@ -1437,6 +1443,20 @@ textarea.contact__input {
   .project__data,
   .footer__container {
     gap: 1rem;
+  }
+
+  .portfolio__heading {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .portfolio__heading > div:first-child {
+    width: 100%;
+  }
+
+  .portfolio .section__title,
+  .portfolio .section__subtitle {
+    text-align: center;
   }
 
   .portfolio__controls,
