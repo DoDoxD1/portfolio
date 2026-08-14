@@ -1478,6 +1478,28 @@ textarea.contact__input {
 }
 
 /* medium devices */
+@media screen and (min-width: 768px) {
+  .portfolio__heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+  }
+
+  .portfolio__heading > div:first-child {
+    min-width: 0;
+  }
+
+  .portfolio .section__title,
+  .portfolio .section__subtitle {
+    text-align: left;
+  }
+
+  .portfolio__controls {
+    justify-self: end;
+    align-self: start;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .home__container,
   .about__container,

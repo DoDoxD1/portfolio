@@ -312,8 +312,10 @@ if (projectsRail) {
 
   const measureProjectRail = () => {
     if (!projectItems.length) return;
-    const baseOffset = projectItems[0].offsetLeft;
-    snapPoints = projectItems.map((item) => clamp(item.offsetLeft - baseOffset, 0, maxScroll()));
+    const railRect = projectsRail.getBoundingClientRect();
+    snapPoints = projectItems.map((item) =>
+      clamp(item.getBoundingClientRect().left - railRect.left + projectsRail.scrollLeft, 0, maxScroll())
+    );
     updateProjectState();
   };
 
@@ -366,7 +368,19 @@ if (projectsRail) {
   const goToIndex = (index, velocity = 0) => {
     if (!snapPoints.length) return;
     const nextIndex = clamp(index, 0, snapPoints.length - 1);
-    startSpring(snapPoints[nextIndex], velocity);
+    const target = snapPoints[nextIndex];
+
+    if (velocity) {
+      startSpring(target, velocity);
+      return;
+    }
+
+    cancelSpring();
+    projectsRail.scrollTo({
+      left: target,
+      behavior: prefersReducedMotion.matches ? "auto" : "smooth",
+    });
+    updateProjectState();
   };
 
   const getVelocity = () => {
