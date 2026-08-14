@@ -7,7 +7,6 @@ const header = document.getElementById("header");
 const scrollUpButton = document.getElementById("scroll-up");
 const themeButton = document.getElementById("theme-button");
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
 const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
 
@@ -113,7 +112,7 @@ const applyTheme = (theme) => {
 
 // slider
 const selectedTheme = localStorage.getItem("selected-theme");
-const fallbackTheme = prefersDarkScheme.matches ? "dark" : "light";
+const fallbackTheme = "dark";
 applyTheme(selectedTheme || fallbackTheme);
 
 //   scroll section
@@ -146,12 +145,6 @@ if (themeButton) {
     localStorage.setItem("selected-theme", nextTheme);
   });
 }
-
-// Previously selected topic (if user selected)
-prefersDarkScheme.addEventListener("change", (event) => {
-  if (localStorage.getItem("selected-theme")) return;
-  applyTheme(event.matches ? "dark" : "light");
-});
 
 // We obtain the current theme that the interface has by validating the dark-theme class
 const ambientOne = document.querySelector(".ambient--one");
@@ -273,6 +266,7 @@ if (projectsRail) {
   };
 
   let snapPoints = [];
+  let activeProjectIndex = 0;
 
   const maxScroll = () => Math.max(0, projectsRail.scrollWidth - projectsRail.clientWidth);
 
@@ -291,6 +285,10 @@ if (projectsRail) {
   const getClosestIndex = (value = projectsRail.scrollLeft) => {
     if (!snapPoints.length) return 0;
 
+    const max = maxScroll();
+    if (value <= 4) return 0;
+    if (value >= max - 4) return snapPoints.length - 1;
+
     return snapPoints.reduce(
       (closest, point, index) =>
         Math.abs(point - value) < Math.abs(snapPoints[closest] - value) ? index : closest,
@@ -299,23 +297,28 @@ if (projectsRail) {
   };
 
   const updateProjectState = () => {
-    const activeIndex = getClosestIndex();
+    activeProjectIndex = getClosestIndex();
 
     projectItems.forEach((item, index) => {
-      item.classList.toggle("is-active", index === activeIndex);
+      item.classList.toggle("is-active", index === activeProjectIndex);
     });
 
     if (projectsIndex) {
-      projectsIndex.textContent = `${formatIndex(activeIndex + 1)} / ${formatIndex(projectItems.length)}`;
+      projectsIndex.textContent = `${formatIndex(activeProjectIndex + 1)} / ${formatIndex(projectItems.length)}`;
     }
   };
 
   const measureProjectRail = () => {
     if (!projectItems.length) return;
     const railRect = projectsRail.getBoundingClientRect();
-    snapPoints = projectItems.map((item) =>
-      clamp(item.getBoundingClientRect().left - railRect.left + projectsRail.scrollLeft, 0, maxScroll())
-    );
+    const viewportCenter = projectsRail.clientWidth / 2;
+
+    snapPoints = projectItems.map((item) => {
+      const itemLeft = item.getBoundingClientRect().left - railRect.left + projectsRail.scrollLeft;
+      const itemCenter = itemLeft + item.clientWidth / 2;
+      return clamp(itemCenter - viewportCenter, 0, maxScroll());
+    });
+
     updateProjectState();
   };
 
@@ -451,13 +454,13 @@ if (projectsRail) {
 
   if (projectsPrev) {
     projectsPrev.addEventListener("click", () => {
-      goToIndex(getClosestIndex() - 1);
+      goToIndex(activeProjectIndex - 1);
     });
   }
 
   if (projectsNext) {
     projectsNext.addEventListener("click", () => {
-      goToIndex(getClosestIndex() + 1);
+      goToIndex(activeProjectIndex + 1);
     });
   }
 
