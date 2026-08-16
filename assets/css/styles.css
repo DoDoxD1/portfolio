@@ -601,6 +601,7 @@ body.dark-theme .portfolio__label {
 
 .home__scroll-button {
   color: var(--first-color);
+  gap: 0.2rem;
   transition: transform 180ms ease;
 }
 

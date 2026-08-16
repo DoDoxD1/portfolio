@@ -420,6 +420,7 @@ if (projectsRail) {
 
   projectsRail.addEventListener("pointerdown", (event) => {
     if (event.pointerType !== "mouse" || event.button !== 0) return;
+    if (event.target instanceof Element && event.target.closest("a, button")) return;
 
     cancelSpring();
     drag.active = true;
